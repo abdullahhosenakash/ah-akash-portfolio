@@ -7,7 +7,7 @@ import {
   faGithub,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
-import { faCircleHalfStroke, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import SunIcon from '../Utilities/SunIcon';
 
 const NavBar = ({ toggled, setToggled }) => {
@@ -107,7 +107,7 @@ const NavBar = ({ toggled, setToggled }) => {
               <FontAwesomeIcon icon={faLinkedin} />
             </Link>
           </li>
-          <div className='divider divider-horizontal'></div>
+          {/* <div className='divider divider-horizontal'></div>
           <li>
             <button className='' onClick={() => setToggled(!toggled)}>
               {toggled ? (
@@ -116,7 +116,7 @@ const NavBar = ({ toggled, setToggled }) => {
                 <SunIcon />
               )}
             </button>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
