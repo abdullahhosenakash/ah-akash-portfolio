@@ -18,7 +18,7 @@ function App() {
     }
   }, [toggled]);
   return (
-    <div className='App h-screen' data-theme={theme}>
+    <div className='App h-screen'>
       <NavBar setToggled={setToggled} toggled={toggled} />
       <Routes>
         <Route path='/' element={<Home />} />

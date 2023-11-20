@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import img from '../../assets/84-removebg-preview.png';
+import img from '../../assets/akash.png';
 
 const Banner = () => {
   const [textState, setTextState] = useState(false);
@@ -10,12 +10,12 @@ const Banner = () => {
     return () => clearInterval(interval);
   }, [textState]);
   return (
-    <div className='min-h-screen bg-base-200'>
+    <div className='min-h-screen'>
       <div className='hero '>
         <div className='hero-content flex-col lg:flex-row-reverse'>
           <img src={img} alt='' className='max-w-sm rounded-lg shadow-2xl' />
           <div>
-            <h3 className='text-xl uppercase text-green-400'>
+            <h3 className='text-xl uppercase text-secondary'>
               Hello, my name is Akash
             </h3>
             <h2 className='text-7xl dark:text-white'>I make websites.</h2>

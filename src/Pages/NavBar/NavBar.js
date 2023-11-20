@@ -7,12 +7,12 @@ import {
   faGithub,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
-import SunIcon from '../Utilities/SunIcon';
+// import { faMoon } from '@fortawesome/free-solid-svg-icons';
+// import SunIcon from '../Utilities/SunIcon';
 
 const NavBar = ({ toggled, setToggled }) => {
   return (
-    <div className='navbar bg-base-200 px-24'>
+    <div className='navbar bg-primary px-24 text-white'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label tabIndex={0} className='btn btn-ghost lg:hidden'>
@@ -36,35 +36,60 @@ const NavBar = ({ toggled, setToggled }) => {
             className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
           >
             <li>
-              <a>Item 1</a>
+              <CustomNavLink to='/projects' toggle={toggled}>
+                Projects
+              </CustomNavLink>
             </li>
             <li>
-              <a>Parent</a>
-              <ul className='p-2'>
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
+              <CustomNavLink to='/resume' toggle={toggled}>
+                Resume
+              </CustomNavLink>
             </li>
             <li>
-              <a>Item 3</a>
+              <CustomNavLink to='/about' toggle={toggled}>
+                About
+              </CustomNavLink>
+            </li>
+            <li>
+              <Link
+                to='https://www.facebook.com/abdullahhosen.akash'
+                target='_blank'
+                className='text-lg px-4 mr-2'
+              >
+                <FontAwesomeIcon icon={faFacebookF} />
+              </Link>
+            </li>
+            <li>
+              <Link
+                to='https://github.com/abdullahhosenakash'
+                target='_blank'
+                className='text-lg px-4 mr-2'
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </Link>
+            </li>
+            <li>
+              <Link
+                to='https://www.linkedin.com/in/md-abdullah-hosen-339916229'
+                target='_blank'
+                className='text-lg px-4'
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </Link>
             </li>
           </ul>
         </div>
-        <Link to='/' className='btn btn-ghost text-xl'>
+        <Link to='/' className='btn btn-ghost text-xl text-secondary'>
           Abdullah Hosen Akash
         </Link>
       </div>
       <div className='navbar-end hidden lg:flex'>
         <ul className='menu menu-horizontal px-1'>
-          <li>
+          {/* <li>
             <CustomNavLink to='/' toggle={toggled}>
               Home
             </CustomNavLink>
-          </li>
+          </li> */}
           <li>
             <CustomNavLink to='/projects' toggle={toggled}>
               Projects
