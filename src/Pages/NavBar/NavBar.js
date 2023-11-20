@@ -41,11 +41,6 @@ const NavBar = ({ toggled, setToggled }) => {
               </CustomNavLink>
             </li>
             <li>
-              <CustomNavLink to='/resume' toggle={toggled}>
-                Resume
-              </CustomNavLink>
-            </li>
-            <li>
               <CustomNavLink to='/about' toggle={toggled}>
                 About
               </CustomNavLink>
@@ -85,19 +80,14 @@ const NavBar = ({ toggled, setToggled }) => {
       </div>
       <div className='navbar-end hidden lg:flex'>
         <ul className='menu menu-horizontal px-1'>
-          {/* <li>
+          <li>
             <CustomNavLink to='/' toggle={toggled}>
               Home
             </CustomNavLink>
-          </li> */}
+          </li>
           <li>
             <CustomNavLink to='/projects' toggle={toggled}>
               Projects
-            </CustomNavLink>
-          </li>
-          <li>
-            <CustomNavLink to='/resume' toggle={toggled}>
-              Resume
             </CustomNavLink>
           </li>
           <li>
