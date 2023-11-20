@@ -6,6 +6,7 @@ import Projects from './Pages/Projects/Projects';
 import { useEffect, useState } from 'react';
 import About from './Pages/About/About';
 import Resume from './Pages/Resume/Resume';
+import Footer from './Pages/Footer/Footer';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -26,6 +27,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/resume' element={<Resume />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

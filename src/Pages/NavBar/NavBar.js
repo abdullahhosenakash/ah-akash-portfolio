@@ -54,7 +54,7 @@ const NavBar = ({ toggled, setToggled }) => {
               <Link
                 to='https://www.facebook.com/abdullahhosen.akash'
                 target='_blank'
-                className='text-lg px-4 mr-2'
+                className='text-lg px-4 mr-2 hover:text-white '
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </Link>
@@ -63,16 +63,16 @@ const NavBar = ({ toggled, setToggled }) => {
               <Link
                 to='https://github.com/abdullahhosenakash'
                 target='_blank'
-                className='text-lg px-4 mr-2'
+                className='text-lg px-4 mr-2 hover:text-white '
               >
                 <FontAwesomeIcon icon={faGithub} />
               </Link>
             </li>
-            <li>
+            <li className=''>
               <Link
                 to='https://www.linkedin.com/in/md-abdullah-hosen-339916229'
                 target='_blank'
-                className='text-lg px-4'
+                className='text-lg px-4 hover:text-white'
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </Link>
@@ -109,7 +109,7 @@ const NavBar = ({ toggled, setToggled }) => {
             <Link
               to='https://www.facebook.com/abdullahhosen.akash'
               target='_blank'
-              className='text-lg px-4 mr-2'
+              className='text-lg px-4 mr-2 hover:text-white'
             >
               <FontAwesomeIcon icon={faFacebookF} />
             </Link>
@@ -118,7 +118,7 @@ const NavBar = ({ toggled, setToggled }) => {
             <Link
               to='https://github.com/abdullahhosenakash'
               target='_blank'
-              className='text-lg px-4 mr-2'
+              className='text-lg px-4 mr-2 hover:text-white'
             >
               <FontAwesomeIcon icon={faGithub} />
             </Link>
@@ -127,7 +127,7 @@ const NavBar = ({ toggled, setToggled }) => {
             <Link
               to='https://www.linkedin.com/in/md-abdullah-hosen-339916229'
               target='_blank'
-              className='text-lg px-4'
+              className='text-lg px-4 hover:text-white'
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </Link>

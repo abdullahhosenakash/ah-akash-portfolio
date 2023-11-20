@@ -36,8 +36,10 @@ const Project = ({ selectedProject }) => {
             <span className='font-semibold text-secondary'>
               Frontend Technologies:
             </span>
-            {usedFrontendTechnologies?.map((technology) => (
-              <li className='ml-4'>{technology}</li>
+            {usedFrontendTechnologies?.map((technology, index) => (
+              <li className='ml-4' key={index}>
+                {technology}
+              </li>
             ))}
           </p>
           {usedBackendTechnologies?.length && (
@@ -45,8 +47,10 @@ const Project = ({ selectedProject }) => {
               <span className='font-semibold text-secondary'>
                 Backend Technologies:
               </span>
-              {usedBackendTechnologies?.map((technology) => (
-                <li className='ml-4'>{technology}</li>
+              {usedBackendTechnologies?.map((technology, index) => (
+                <li className='ml-4' key={index}>
+                  {technology}
+                </li>
               ))}
             </p>
           )}
@@ -107,8 +111,8 @@ const Project = ({ selectedProject }) => {
                 </tr>
               </thead>
               <tbody>
-                {userCredentials?.map((userCredential) => (
-                  <tr>
+                {userCredentials?.map((userCredential, index) => (
+                  <tr key={index}>
                     <td className='border p-1'>{userCredential.userType}</td>
                     <td className='border p-1'>{userCredential.userEmail}</td>
                     <td className='border p-1'>
