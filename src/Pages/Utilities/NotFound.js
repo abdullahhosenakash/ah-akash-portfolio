@@ -8,7 +8,7 @@ const NotFound = () => {
       </h2>
       <h4 className='text-3xl text-center mt-6 text-white'>
         Perhaps you are finding something that had not happened yet <br />
-        sorry for the inconvenience
+        Sorry for the inconvenience
       </h4>
     </div>
   );

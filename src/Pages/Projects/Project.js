@@ -16,7 +16,7 @@ const Project = ({ selectedProject }) => {
   } = selectedProject || {};
   return (
     <dialog id='my_modal_1' className='modal'>
-      <div className='modal-box max-w-2xl pr-4 bg-primary text-white text-opacity-80 border-8  border-primary '>
+      <div className='modal-box max-w-2xl lg:pr-4 px-2 py-2 bg-primary text-white text-opacity-80 lg:border-8  border-primary '>
         <img
           src={image}
           alt=''
@@ -27,11 +27,11 @@ const Project = ({ selectedProject }) => {
           <span className='font-semibold text-secondary'>Project Type:</span>{' '}
           {type}
         </p>
-        <p className='my-1'>
+        <p className='my-1 text-justify'>
           <span className='font-semibold text-secondary'>Description:</span>
           <br /> {description}
         </p>
-        <div className='flex flex-row'>
+        <div className='flex flex-col lg:flex-row'>
           <p className='my-1'>
             <span className='font-semibold text-secondary'>
               Frontend Technologies:
@@ -92,37 +92,41 @@ const Project = ({ selectedProject }) => {
           </Link>
         </p>
         {userCredentials?.length && (
-          <p className='my-1'>
-            <span className='font-semibold text-secondary'>
-              User Credentials for Live Website:
-            </span>
-            <table className='text-center mt-1'>
-              <thead>
-                <tr>
-                  <th className='border p-1 text-secondary font-normal w-[25%]'>
-                    User Type
-                  </th>
-                  <th className='border p-1 text-secondary font-normal w-[45%]'>
-                    User Email
-                  </th>
-                  <th className='border p-1 text-secondary font-normal w-[25%]'>
-                    User Password
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {userCredentials?.map((userCredential, index) => (
-                  <tr key={index}>
-                    <td className='border p-1'>{userCredential.userType}</td>
-                    <td className='border p-1'>{userCredential.userEmail}</td>
-                    <td className='border p-1'>
-                      {userCredential.userPassword}
-                    </td>
+          <>
+            <p className='my-1'>
+              <span className='font-semibold text-secondary'>
+                User Credentials for Live Website:
+              </span>
+            </p>
+            <div className='overflow-x-auto'>
+              <table className='text-center mt-1'>
+                <thead>
+                  <tr>
+                    <th className='border p-1 text-secondary font-normal w-[25%]'>
+                      User Type
+                    </th>
+                    <th className='border p-1 text-secondary font-normal w-[45%]'>
+                      User Email
+                    </th>
+                    <th className='border p-1 text-secondary font-normal w-[25%]'>
+                      User Password
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </p>
+                </thead>
+                <tbody>
+                  {userCredentials?.map((userCredential, index) => (
+                    <tr key={index}>
+                      <td className='border p-1'>{userCredential.userType}</td>
+                      <td className='border p-1'>{userCredential.userEmail}</td>
+                      <td className='border p-1'>
+                        {userCredential.userPassword}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
         )}
 
         <div className='form-control mt-6 modal-action'>

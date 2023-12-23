@@ -12,7 +12,7 @@ import {
 
 const NavBar = ({ toggled, setToggled }) => {
   return (
-    <div className='navbar bg-primary px-24 text-white'>
+    <div className='navbar bg-primary lg:px-24 text-white'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label tabIndex={0} className='btn btn-ghost lg:hidden'>
@@ -49,7 +49,7 @@ const NavBar = ({ toggled, setToggled }) => {
               <Link
                 to='https://www.facebook.com/abdullahhosen.akash'
                 target='_blank'
-                className='text-lg px-4 mr-2 hover:text-white '
+                className='text-xl text-center block hover:text-white '
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </Link>
@@ -58,7 +58,7 @@ const NavBar = ({ toggled, setToggled }) => {
               <Link
                 to='https://github.com/abdullahhosenakash'
                 target='_blank'
-                className='text-lg px-4 mr-2 hover:text-white '
+                className='text-xl text-center block hover:text-white '
               >
                 <FontAwesomeIcon icon={faGithub} />
               </Link>
@@ -67,7 +67,7 @@ const NavBar = ({ toggled, setToggled }) => {
               <Link
                 to='https://www.linkedin.com/in/md-abdullah-hosen-339916229'
                 target='_blank'
-                className='text-lg px-4 hover:text-white'
+                className='text-xl text-center block hover:text-white'
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </Link>

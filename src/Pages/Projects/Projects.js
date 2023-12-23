@@ -440,17 +440,17 @@ const Projects = ({ from }) => {
     }
   }, [from, projectDetails]);
   return (
-    <div className='px-24 py-6'>
+    <div className='lg:px-24 px-5 py-6'>
       <h2 className='text-center text-4xl text-secondary underline mb-4'>
         Done Projects
       </h2>
-      <div className='grid grid-cols-3 gap-4'>
+      <div className='grid lg:grid-cols-3 gap-4'>
         {limitedProjects?.map((project, index) => (
           <div
             key={index}
             className='card shrink-0 w-full max-w-sm shadow-xl shadow-gray-700 bg-primary text-gray-300'
           >
-            <div className='card-body'>
+            <div className='card-body p-4'>
               <img
                 src={project.image}
                 alt=''
@@ -495,7 +495,7 @@ const Projects = ({ from }) => {
       {from === 'home' && (
         <div className='form-control mt-12'>
           <button
-            className='btn border-0 uppercase text-secondary bg-slate-700 hover:bg-slate-600 w-1/2 mx-auto'
+            className='btn border-0 uppercase text-secondary bg-slate-700 hover:bg-slate-600 lg:w-1/2 mx-auto'
             onClick={() => navigate('/projects', { replace: true })}
           >
             Show All Projects
